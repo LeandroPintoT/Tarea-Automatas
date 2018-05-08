@@ -7,28 +7,12 @@ ID : [a-zA-Z_]+[a-zA-Z0-9_-]* ;     // un id puede empezar con letras o _ y pued
 
 WS : [ \t\r]+ -> skip ; 			// skip spaces, tabs, newlines
 
-/*sentencia: declaracion_int | declaracion_real | declaracion_bool | declaracion_string | declaracion_const | muestra | leer |
-			condicional | operacion_entera | operacion_real | while | for | asignacion_int | asignacion_real | asignacion_bool |
-			asignacion_string | asignacion_const | comparacion | funcion;
-			
-			
-declaracion_int: ENTERO ID SALTO;
-declaracion_real: REAL ID SALTO;
-declaracion_bool: BOOL ID SALTO;
-declaracion_string: STRING ID SALTO;
-
-
-asignacion_int: ID ASIGN NUM SALTO;
-asignacion_real: ID ASIGN FLOAT SALTO;
-asignacion_bool: ID ASIGN SINO SALTO;
-asignacion_string: ID ASIGN STR SALTO;*/
-
 //tipos de dato
 fragment SALTO	: '\n'			;
 fragment DIG	: [0-9] 		;
 fragment PUNTO	: '.'			;
-fragment TRUE	: 'veridico'	;
-fragment NOTRUE	: 'fraudulento'	;
+fragment TRUE	: 'noteama'	;
+fragment NOTRUE	: 'suamor'	;
 
 
 NUM: 	DIG+ 				;
@@ -96,4 +80,7 @@ PI: '(';
 PD: ')';
 PCI: '[';
 PCD: ']';
+
+BEGIN:	'introIngInf';
+END:	'proyTi';
 
