@@ -38,6 +38,8 @@ asignacion	:	ID ASIGN NUM SALTO
 	
 	tiburoncin ujaja
 			
+			hola
+			
 whiles	:	PI sentencia PD
 		;
 			
