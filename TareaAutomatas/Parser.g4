@@ -35,6 +35,8 @@ asignacion	:	ID ASIGN NUM SALTO
 			|	ID ASIGN ENTERO SALTO
 			|	ID ASIGN STRING SALTO
 			;
+	
+	tiburoncin ujaja
 			
 whiles	:	PI sentencia PD
 		;
@@ -42,5 +44,3 @@ whiles	:	PI sentencia PD
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
 asignacion_string: ID ASIGN STR SALTO;
-
-por la chuchi
