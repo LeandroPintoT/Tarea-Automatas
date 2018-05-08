@@ -1,40 +1,24 @@
 grammar Lexico;
 
 
-r  : 'hello' ID ;         			// match keyword hello followed by an identifier
+r  : 'hello' ID ;                     // match keyword hello followed by an identifier
 
-ID : [a-zA-Z_]+[a-zA-Z0-9_-]* ;     // un id puede empezar con letras o _ y puede ser seguido o no de letras, numeros, _ y -
+ID : [a-zA-Z]+[a-zA-Z0-9-]* ;     // un id puede empezar con letras o  y puede ser seguido o no de letras, numeros,  y -
 
-WS : [ \t\r]+ -> skip ; 			// skip spaces, tabs, newlines
-
-/*sentencia: declaracion_int | declaracion_real | declaracion_bool | declaracion_string | declaracion_const | muestra | leer |
-			condicional | operacion_entera | operacion_real | while | for | asignacion_int | asignacion_real | asignacion_bool |
-			asignacion_string | asignacion_const | comparacion | funcion;
-			
-			
-declaracion_int: ENTERO ID SALTO;
-declaracion_real: REAL ID SALTO;
-declaracion_bool: BOOL ID SALTO;
-declaracion_string: STRING ID SALTO;
-
-
-asignacion_int: ID ASIGN NUM SALTO;
-asignacion_real: ID ASIGN FLOAT SALTO;
-asignacion_bool: ID ASIGN SINO SALTO;
-asignacion_string: ID ASIGN STR SALTO;*/
+WS : [ \t\r]+ -> skip ;             // skip spaces, tabs, newlines
 
 //tipos de dato
-fragment SALTO	: '\n'			;
-fragment DIG	: [0-9] 		;
-fragment PUNTO	: '.'			;
-fragment TRUE	: 'veridico'	;
-fragment NOTRUE	: 'fraudulento'	;
+fragment SALTO    : '\n'            ;
+fragment DIG    : [0-9]         ;
+fragment PUNTO    : '.'            ;
+fragment TRUE    : 'noteama'    ;
+fragment NOTRUE    : 'suamor'    ;
 
 
-NUM: 	DIG+ 				;
-FLOAT:	NUM PUNTO NUM		; 
-SINO: 	TRUE | NOTRUE		;
-STR: 	'"'.*?'"'			;
+NUM:     DIG+                 ;
+FLOAT:    NUM PUNTO NUM        ; 
+SINO:     TRUE | NOTRUE        ;
+STR:     '"'.?'"'            ;
 
 MAIN: 'main';
 
@@ -52,7 +36,7 @@ LEE: 'leer';
 //operadores matematicos
 SUMA: '+';
 RESTA: '-';
-MULT: '*';
+MULT: '';
 DIV: '/';
 MOD: '%';
 
@@ -80,10 +64,10 @@ FOR: 'for';
 
 //funciones matematicas
 SQRT: 'sqrt';
-FIB: 'fib';		//fibonacci
+FIB: 'fib';        //fibonacci
 COS: 'cos';
 SEN: 'sin';
-PRIM: 'prim';	//primos
+PRIM: 'prim';    //primos
 POT: 'pou';
 
 //asignacion
@@ -97,3 +81,5 @@ PD: ')';
 PCI: '[';
 PCD: ']';
 
+BEGIN:    'introIngInf';
+END:    'proyTi';
