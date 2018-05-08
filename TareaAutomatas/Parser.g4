@@ -36,11 +36,11 @@ asignacion	:	ID ASIGN NUM SALTO
 			|	ID ASIGN STRING SALTO
 			;
 			
+			hola
+			
 whiles	:	PI sentencia PD
 		;
 			
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
 asignacion_string: ID ASIGN STR SALTO;
-
-por la chuchi
