@@ -21,6 +21,7 @@ sentencia    :    declaracionvar
             |    fors
             |    whiles
             ;
+            
 asignacion_int: ID ASIGN NUM SALTO;
             
 declaracionvar	:	variable ID
@@ -39,7 +40,6 @@ asignacion	:	ID ASIGN NUM SALTO
 			|	ID ASIGN STRING SALTO
 			;
 			
-			hola
 			
 whiles	:	PI sentencia PD
 		;
