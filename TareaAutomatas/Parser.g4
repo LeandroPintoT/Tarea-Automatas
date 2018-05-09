@@ -35,9 +35,7 @@ asignacion	:	ID ASIGN NUM SALTO
 			|	ID ASIGN ENTERO SALTO
 			|	ID ASIGN STRING SALTO
 			;
-	
-	tiburoncin ujaja
-			
+
 whiles	:	PI sentencia PD
 		;
 		
