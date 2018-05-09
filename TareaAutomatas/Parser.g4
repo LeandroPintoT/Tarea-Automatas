@@ -47,6 +47,9 @@ sumas	:	ID SUMA ID
 		|	NUM SUMA ID
 		|	NUM SUMA NUM
 		;
+		
+muestra	:	MUESTRA COM variable COM SALTO
+		;
 			
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
