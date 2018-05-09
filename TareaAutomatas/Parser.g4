@@ -62,9 +62,13 @@ fors	:	FOR stoy probando
 whiles	:	PI sentencia PD
 		;
 
-condicional : 	PI operacion PD LLI block LLD
-				| PI operacion PD stat 
+condicional : 	PI operacion PD LLI bloque LLD
+				| PI operacion PD sentencia
 			;
+
+bloque 	:	sentencia+
+		; 	
+
 
 
 asignacion_real: ID ASIGN FLOAT SALTO;
