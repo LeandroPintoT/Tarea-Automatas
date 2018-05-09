@@ -41,10 +41,12 @@ asignacion	:	ID ASIGN NUM SALTO
 			;
 
 
-whiles	:	PI sentencia PD
+whiles	:	PI sentencia PD LLI bloque LLD
 		;
 		
-
+bloque	:	sentencia*
+		;
+		
 operaciones	:	sumas+
 			;
 		
@@ -54,16 +56,11 @@ sumas	:	ID SUMA ID
 		|	NUM SUMA NUM
 		;
 
-fors	:	FOR stoy probando	
-
-	
-			
-			
-whiles	:	PI sentencia PD
+fors	:	FOR stoy probando
 		;
 
-condicional : 	PI operacion PD LLI block LLD
-				| PI operacion PD stat 
+condicional	: 	PI operacion PD LLI block LLD
+			| PI operacion PD stat 
 			;
 
 
