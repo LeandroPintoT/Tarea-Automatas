@@ -62,9 +62,13 @@ fors	:	FOR stoy probando
 whiles	:	PI sentencia PD
 		;
 
-condicional : 	PI operacion PD LLI bloque LLD
-				| PI operacion PD sentencia
-			;
+condicional	 :	IF bloque_condicional
+				(ELSE bloque_condicional)?
+				;	
+
+bloque_condicional 	: 	PI operacion PD LLI bloque LLD
+						| PI operacion PD sentencia
+					;
 
 bloque 	:	sentencia+
 		; 	
