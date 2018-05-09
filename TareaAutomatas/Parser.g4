@@ -36,8 +36,6 @@ asignacion	:	ID ASIGN NUM SALTO
 			|	ID ASIGN STRING SALTO
 			;
 			
-			hola
-			
 whiles	:	PI sentencia PD
 		;
 			
