@@ -44,6 +44,10 @@ asignacion	:	ID ASIGN NUM SALTO
 whiles	:	PI sentencia PD
 		;
 
+condicional : 	PI operacion PD LLI block LLD
+				| PI operacion PD stat 
+			;
+
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
 asignacion_string: ID ASIGN STR SALTO;
