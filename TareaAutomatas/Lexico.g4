@@ -15,10 +15,12 @@ fragment TRUE		: 'noteama'	;
 fragment NOTRUE		: 'suamor'	;
 
 
-NUM		: DIG+				;
-FLOAT	: NUM PUNTO NUM		; 
-SINO	: TRUE | NOTRUE		;
-STR		: '"'.?'"'			;
+
+NUM		:	DIG+			;
+FLOAT	:	NUM PUNTO NUM	; 
+SINO	: 	TRUE | NOTRUE	;
+STR		:	'"'.*?'"'		;
+
 
 MAIN	: 'main'			;
 
@@ -39,6 +41,7 @@ RESTA	: '-'	;
 MULT	: '*'	;
 DIV		: '/'	;
 MOD		: '%'	;
+
 
 //operadores logicos
 AND		: 'and'	;
