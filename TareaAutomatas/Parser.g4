@@ -38,6 +38,15 @@ asignacion	:	ID ASIGN NUM SALTO
 			
 whiles	:	PI sentencia PD
 		;
+		
+operaciones	:	sumas+
+			;
+		
+sumas	:	ID SUMA ID
+		|	ID SUMA NUM
+		|	NUM SUMA ID
+		|	NUM SUMA NUM
+		;
 			
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
