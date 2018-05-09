@@ -42,6 +42,8 @@ asignacion	:	ID ASIGN NUM SALTO
 			
 whiles	:	PI sentencia PD
 		;
+		
+fors	:	FOR stoy probando	
 			
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
