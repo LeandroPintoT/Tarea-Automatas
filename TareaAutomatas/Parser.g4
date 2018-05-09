@@ -5,14 +5,15 @@ import Lexico;
 
 s 		: sentencia EOF					
 		;
-		
-programa    :    inicio    sentencia+ finale;
+
+
+programa    :    inicio sentencia+ finale;
 
 inicio        :    BEGIN;
 finale        :    END;
 
 
-sentencia    :    declaracionvar
+sentencia	:    declaracionvar
             |    asignvar
             |    muestra
             |    leer
@@ -21,49 +22,71 @@ sentencia    :    declaracionvar
             |    fors
             |    whiles
             ;
-            
+
+
 asignacion_int: ID ASIGN NUM SALTO;
-            
+
+
 declaracionvar	:	variable ID
-				|	variable asignacion
+				|	variable asignvar
 				;
+
 
 variable	:	REAL
 			|	BOOL
 			|	ENTERO
 			|	STRING
 			;
-            
-asignacion	:	ID ASIGN NUM SALTO
+
+
+asignvar	:	ID ASIGN NUM SALTO
 			|	ID ASIGN BOOL SALTO
 			|	ID ASIGN ENTERO SALTO
 			|	ID ASIGN STRING SALTO
 			;
 
 
-whiles	:	PI sentencia PD LLI bloque LLD
+operaciones	:	operaciones operador operaciones
+			|	ID
+			|	PI operaciones PD
+			;
+
+
+operador	:	MAYOR
+			|	MENOR
+			|	MAIG
+			|	MEIG
+			|	IG
+			|	NIG
+			| 	SUMA
+			|	RESTA
+			|	DIV
+			|	MULT
+			|	MOD
+			|	AND
+			|	OR
+			;
+
+
+whiles	:	PI operaciones PD LLI bloque LLD
 		;
-		
+
+
 bloque	:	sentencia*
 		;
-		
-operaciones	:	sumas+
-			;
-		
+
+
 sumas	:	ID SUMA ID
 		|	ID SUMA NUM
 		|	NUM SUMA ID
 		|	NUM SUMA NUM
 		;
 
+
 fors	:	FOR stoy probando
 		;
 
+
 condicional	: 	PI operacion PD LLI block LLD
-			| PI operacion PD stat 
+			|	PI operacion PD stat 
 			;
-
-
-asignacion_real: ID ASIGN FLOAT SALTO;
-asignacion_bool: ID ASIGN SINO SALTO;
-asignacion_string: ID ASIGN STR SALTO;

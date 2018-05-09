@@ -18,7 +18,7 @@ fragment NOTRUE    : 'suamor'    ;
 NUM:     DIG+                 ;
 FLOAT:    NUM PUNTO NUM        ; 
 SINO:     TRUE | NOTRUE        ;
-STR:     '"'.?'"'            ;
+STR:     '"'.*?'"'            ;
 
 MAIN: 'main';
 
@@ -36,7 +36,7 @@ LEE: 'leer';
 //operadores matematicos
 SUMA: '+';
 RESTA: '-';
-MULT: '';
+MULT: '*';
 DIV: '/';
 MOD: '%';
 
