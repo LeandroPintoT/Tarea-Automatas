@@ -35,10 +35,13 @@ asignacion	:	ID ASIGN NUM SALTO
 			|	ID ASIGN ENTERO SALTO
 			|	ID ASIGN STRING SALTO
 			;
+	
+	tiburoncin ujaja
 			
 whiles	:	PI sentencia PD
 		;
 		
+
 operaciones	:	sumas+
 			;
 		
@@ -47,6 +50,9 @@ sumas	:	ID SUMA ID
 		|	NUM SUMA ID
 		|	NUM SUMA NUM
 		;
+
+fors	:	FOR stoy probando	
+
 			
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
