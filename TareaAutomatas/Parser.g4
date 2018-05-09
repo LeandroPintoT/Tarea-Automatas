@@ -87,6 +87,11 @@ fors	:	FOR stoy probando
 		;
 
 
-condicional	: 	PI operacion PD LLI block LLD
-			|	PI operacion PD stat 
-			;
+condicional	 :	IF bloque_condicional
+				(ELSE bloque_condicional)?
+				;	
+
+bloque_condicional 	: 	PI operacion PD LLI bloque LLD
+					| PI operacion PD sentencia
+					;	
+
