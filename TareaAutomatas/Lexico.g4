@@ -84,6 +84,7 @@ PD		: ')'	;
 PCI		: '['	;
 PCD		: ']'	;
 COM		: '"'	;
+PIP		: '|'	;
 
 BEGIN	: 'introIngInf'	;
 END		: 'proyTi'		;

@@ -24,11 +24,8 @@ sentencia	:    declaracionvar
             ;
 
 
-asignacion_int: ID ASIGN NUM SALTO;
-
-
-declaracionvar	:	variable ID
-				|	variable asignvar
+declaracionvar	:	variable ID SALTO
+				|	variable asignvar SALTO
 				;
 
 
@@ -39,10 +36,10 @@ variable	:	REAL
 			;
 
 
-asignvar	:	ID ASIGN NUM SALTO
-			|	ID ASIGN BOOL SALTO
-			|	ID ASIGN ENTERO SALTO
-			|	ID ASIGN STRING SALTO
+asignvar	:	ID ASIGN NUM
+			|	ID ASIGN BOOL
+			|	ID ASIGN ENTERO
+			|	ID ASIGN STRING
 			;
 
 
@@ -82,11 +79,13 @@ sumas	:	ID SUMA ID
 		|	NUM SUMA NUM
 		;
 		
-muestra	:	MUESTRA COM variable COM SALTO
+muestra	:	MUESTRA COM ID COM SALTO
+		;
+		
+leer	: ID ASIGN LEE SALTO 
 		;
 
-
-fors	:	FOR stoy probando
+fors	:	FOR asignvar PIP operaciones LLI bloque LLD
 		;
 
 
@@ -94,6 +93,6 @@ condicional	 :	IF bloque_condicional
 				(ELSE bloque_condicional)?
 				;	
 
-bloque_condicional 	: 	PI operacion PD LLI bloque LLD
-					| PI operacion PD sentencia
+bloque_condicional 	: 	PI operaciones PD LLI bloque LLD
+					| PI operaciones PD sentencia
 					;	
