@@ -67,7 +67,7 @@ FOR		: 'for'		;
 
 //funciones matematicas
 SQRT	: 'sqrt'	;
-FIB		: 'fibonichan'		;    //fibonacci
+FIB		: 'fiboniichan'		;    //fibonacci
 COS		: 'cos'		;
 SEN		: 'oppai'		;
 PRIM	: 'itoko'	;    //primos

@@ -32,7 +32,7 @@ public class LexicoParser extends Parser {
 		null, "'hello'", null, null, null, null, null, null, "'main'", "'real'", 
 		"'int'", "'bool'", "'string'", "'muestra'", "'leer'", "'+'", "'-'", "'*'", 
 		"'/'", "'%'", "'and'", "'or'", "'!'", "'>'", "'<'", "'>='", "'<='", "'=='", 
-		"'!='", "'if'", "'else'", "'switch'", "'while'", "'for'", "'sqrt'", "'fibonichan'", 
+		"'!='", "'if'", "'else'", "'switch'", "'while'", "'for'", "'sqrt'", "'fiboniichan'", 
 		"'cos'", "'oppai'", "'itoko'", "'pou'", "'='", "'{'", "'}'", "'('", "')'", 
 		"'['", "']'", "'\"'", "'|'", "'introIngInf'", "'proyTi'"
 	};
