@@ -67,10 +67,10 @@ FOR		: 'for'		;
 
 //funciones matematicas
 SQRT	: 'sqrt'	;
-FIB		: 'fib'		;    //fibonacci
+FIB		: 'fibonichan'		;    //fibonacci
 COS		: 'cos'		;
-SEN		: 'sin'		;
-PRIM	: 'prim'	;    //primos
+SEN		: 'oppai'		;
+PRIM	: 'itoko'	;    //primos
 POT		: 'pou'		;
 
 //asignacion
