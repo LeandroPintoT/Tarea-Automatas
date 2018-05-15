@@ -54,4 +54,5 @@ fors	:	FOR stoy probando
 			
 asignacion_real: ID ASIGN FLOAT SALTO;
 asignacion_bool: ID ASIGN SINO SALTO;
+//asfasfasd
 asignacion_string: ID ASIGN STR SALTO;
