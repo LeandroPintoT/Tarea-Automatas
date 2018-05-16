@@ -48,6 +48,7 @@ COM=47
 PIP=48
 BEGIN=49
 END=50
+SALTO=51
 'hello'=1
 'main'=8
 'real'=9

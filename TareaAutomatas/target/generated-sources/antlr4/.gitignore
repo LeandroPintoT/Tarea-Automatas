@@ -4,3 +4,14 @@
 /LexicoLexer.tokens
 /LexicoParser.java
 /LexicoVisitor.java
+/LexicoBaseVisitor.class
+/LexicoLexer.class
+/LexicoParser$RContext.class
+/LexicoParser.class
+/LexicoVisitor.class
+/Parser.tokens
+/ParserBaseVisitor.java
+/ParserLexer.java
+/ParserLexer.tokens
+/ParserParser.java
+/ParserVisitor.java

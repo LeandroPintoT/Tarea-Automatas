@@ -2,57 +2,98 @@ grammar Parser;
 
 import Lexico;
 
+
 s 		: sentencia EOF					
 		;
 
-programa    :    inicio    sentencia+ finale;
+
+programa    :    inicio sentencia+ finale;
 
 inicio        :    BEGIN;
 finale        :    END;
 
-sentencia   :	declaracionvar
-            |   asignvar
-            |   muestra
-            |   leer
-            |   condicional
-            |   operaciones
-            |   fors
-            |   whiles
+
+sentencia	:    declaracionvar
+            |    asignvar
+            |    muestra
+            |    leer
+            |    condicional
+            |    operaciones
+            |    fors
+            |    whiles
             ;
-            
-declaracionvar	:	variable ID
-				|	variable asignacion
+
+
+declaracionvar	:	variable ID SALTO
+				|	variable asignvar SALTO
 				;
+
 
 variable	:	REAL
 			|	BOOL
 			|	ENTERO
 			|	STRING
 			;
-            
-asignacion	:	ID ASIGN NUM SALTO
-			|	ID ASIGN BOOL SALTO
-			|	ID ASIGN ENTERO SALTO
-			|	ID ASIGN STRING SALTO
+
+
+asignvar	:	ID ASIGN NUM
+			|	ID ASIGN BOOL
+			|	ID ASIGN ENTERO
+			|	ID ASIGN STRING
 			;
 
-whiles	:	PI sentencia PD
+
+operaciones	:	operaciones operador operaciones
+			|	ID
+			|	PI operaciones PD
+			;
+
+
+operador	:	MAYOR
+			|	MENOR
+			|	MAIG
+			|	MEIG
+			|	IG
+			|	NIG
+			| 	SUMA
+			|	RESTA
+			|	DIV
+			|	MULT
+			|	MOD
+			|	AND
+			|	OR
+			;
+
+
+whiles	:	PI operaciones PD LLI bloque LLD
 		;
-		
 
-operaciones	:	sumas+
-			;
-		
+
+bloque	:	sentencia*
+		;
+
+
 sumas	:	ID SUMA ID
 		|	ID SUMA NUM
 		|	NUM SUMA ID
 		|	NUM SUMA NUM
 		;
+		
+muestra	:	MUESTRA COM ID COM SALTO
+		;
+		
+leer	: ID ASIGN LEE SALTO 
+		;
 
-fors	:	FOR stoy probando	
+fors	:	FOR asignvar PIP operaciones LLI bloque LLD
+		;
 
-			
-asignacion_real: ID ASIGN FLOAT SALTO;
-asignacion_bool: ID ASIGN SINO SALTO;
-//asfasfasd
-asignacion_string: ID ASIGN STR SALTO;
+
+condicional	 :	IF bloque_condicional
+				(ELSE bloque_condicional)?
+				;	
+
+bloque_condicional 	: 	PI operaciones PD LLI bloque LLD
+					| PI operaciones PD sentencia
+					;	
+					
