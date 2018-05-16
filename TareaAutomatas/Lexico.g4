@@ -65,7 +65,7 @@ FOR		: 'for'		;	//mo
 SQRT	: 'sqrt'	;	//pakiaka
 FIB		: 'fiboniichan'		;    //fibonacci  -  fiboo
 COS		: 'cos'		;	//tuhinga
-SEN		: 'oppai'	;	//tuhinga x2
+SEN		: 'oppai'	;	//centro = pokapu
 PRIM	: 'itoko'	;   //teina
 POT		: 'pou'		;	//mana
 
