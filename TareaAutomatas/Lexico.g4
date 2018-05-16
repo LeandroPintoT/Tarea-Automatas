@@ -63,11 +63,12 @@ FOR		: 'for'		;	//mo
 
 //funciones matematicas
 SQRT	: 'sqrt'	;	//pakiaka
-FIB		: 'fiboniichan'		;    //fibonacci  -  fiboo
+FIB		: 'fiboo'	;    //fibonacci  -  fiboo
 COS		: 'cos'		;	//tuhinga
-SEN		: 'oppai'	;	//centro = pokapu
-PRIM	: 'itoko'	;   //teina
+SEN		: 'sin'		;	//tuhinga x2
+PRIM	: 'cos'		;   //teina
 POT		: 'pou'		;	//mana
+
 
 //asignacion
 ASIGN	: '='	;
@@ -82,6 +83,11 @@ PCD		: ']'	;
 COM		: '"'	;
 PIP		: '|'	;
 
+//puntuacion
+DP		: ':'	;
+
 BEGIN	: 'introIngInf'	;	//home
 END		: 'proyTi'		;	//mutunga
 
+CASE	:  'caso'		;   //tuhinga
+DEFAULT :  'defecto'	;	//mate

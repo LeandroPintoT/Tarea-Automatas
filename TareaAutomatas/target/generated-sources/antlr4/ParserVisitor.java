@@ -118,6 +118,18 @@ public interface ParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBloque_condicional(ParserParser.Bloque_condicionalContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ParserParser#switchz}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSwitchz(ParserParser.SwitchzContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ParserParser#casos_switch}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCasos_switch(ParserParser.Casos_switchContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ParserParser#r}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
