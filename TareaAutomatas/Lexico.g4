@@ -10,8 +10,8 @@ WS : [ \t\r]+ -> skip ;             // skip spaces, tabs, newlines
 //tipos de dato
 fragment DIG		: [0-9]		;
 fragment PUNTO		: '.'		;
-fragment TRUE		: 'noteama'	;
-fragment NOTRUE		: 'suamor'	;
+fragment TRUE		: 'noteama'	;	//pono
+fragment NOTRUE		: 'suamor'	;	//rino
 
 
 SALTO	:	'\n'			;
@@ -20,19 +20,16 @@ FLOAT	:	NUM PUNTO NUM	;
 SINO	: 	TRUE | NOTRUE	;
 STR		:	'"'.*?'"'		;
 
-
-MAIN	: 'main'			;
-
 //variables
-REAL	: 'real'	;
-ENTERO	: 'int'		;
-BOOL	: 'bool'	;
-STRING	: 'string'	;
+REAL	: 'real'	;	//numero = tau
+ENTERO	: 'int'		;	//katoa
+BOOL	: 'bool'	;	//sino = engari
+STRING	: 'string'	;	//cadena = aho  -  cadenas = mekameka
 
 
 //output input
-MUESTRA	: 'muestra'	;
-LEE		: 'leer'	;
+MUESTRA	: 'muestra'	;	//tauira  -  imprimir = ta
+LEE		: 'leer'	;	//panui
 
 //operadores matematicos
 SUMA	: '+'	;
@@ -43,9 +40,9 @@ MOD		: '%'	;
 
 
 //operadores logicos
-AND		: 'and'	;
-OR		: 'or'	;
-NOT		: '!'	;
+AND		: 'and'	;	//a
+OR		: 'or'	;	//ó = ranei
+NOT		: '!'	;	//kore
 
 //operadores logicos x2
 MAYOR	: '>'	;
@@ -56,21 +53,21 @@ IG		: '=='	;
 NIG		: '!='	;
 
 //condicionales
-IF		: 'if'		;
-ELSE	: 'else'	;
-SWITCH	: 'switch'	;
+IF		: 'if'		;	//ae
+ELSE	: 'else'	;	//si no = aee
+SWITCH	: 'switch'	;	//interruptor = whakawhiti  -  cambiar = huringa
 
 //estructuras repetitivas
-WHILE	: 'while'	;
-FOR		: 'for'		;
+WHILE	: 'while'	;	//ahakoa
+FOR		: 'for'		;	//mo
 
 //funciones matematicas
-SQRT	: 'sqrt'	;
-FIB		: 'fiboniichan'		;    //fibonacci
-COS		: 'cos'		;
-SEN		: 'oppai'	;
-PRIM	: 'itoko'	;    //primos
-POT		: 'pou'		;
+SQRT	: 'sqrt'	;	//pakiaka
+FIB		: 'fiboniichan'		;    //fibonacci  -  fiboo
+COS		: 'cos'		;	//tuhinga
+SEN		: 'oppai'	;	//tuhinga x2
+PRIM	: 'itoko'	;   //teina
+POT		: 'pou'		;	//mana
 
 //asignacion
 ASIGN	: '='	;
@@ -85,6 +82,6 @@ PCD		: ']'	;
 COM		: '"'	;
 PIP		: '|'	;
 
-BEGIN	: 'introIngInf'	;
-END		: 'proyTi'		;
+BEGIN	: 'introIngInf'	;	//home
+END		: 'proyTi'		;	//mutunga
 
