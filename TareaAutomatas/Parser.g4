@@ -45,6 +45,7 @@ asignvar	:	ID ASIGN NUM
 
 operaciones	:	operaciones operador operaciones
 			|	ID
+			|	NUM
 			|	PI operaciones PD
 			;
 

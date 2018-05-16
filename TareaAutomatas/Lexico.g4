@@ -8,14 +8,13 @@ ID : [a-zA-Z]+[a-zA-Z0-9-]* ;     // un id puede empezar con letras o  y puede s
 WS : [ \t\r]+ -> skip ;             // skip spaces, tabs, newlines
 
 //tipos de dato
-fragment SALTO		: '\n'		;
 fragment DIG		: [0-9]		;
 fragment PUNTO		: '.'		;
 fragment TRUE		: 'noteama'	;
 fragment NOTRUE		: 'suamor'	;
 
 
-
+SALTO	:	'\n'			;
 NUM		:	DIG+			;
 FLOAT	:	NUM PUNTO NUM	; 
 SINO	: 	TRUE | NOTRUE	;
@@ -69,7 +68,7 @@ FOR		: 'for'		;
 SQRT	: 'sqrt'	;
 FIB		: 'fiboniichan'		;    //fibonacci
 COS		: 'cos'		;
-SEN		: 'oppai'		;
+SEN		: 'oppai'	;
 PRIM	: 'itoko'	;    //primos
 POT		: 'pou'		;
 
