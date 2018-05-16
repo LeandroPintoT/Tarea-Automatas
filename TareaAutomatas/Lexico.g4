@@ -69,8 +69,8 @@ FOR		: 'for'		;
 SQRT	: 'sqrt'	;
 FIB		: 'fiboniichan'		;    //fibonacci
 COS		: 'cos'		;
-SEN		: 'oppai'		;
-PRIM	: 'itoko'	;    //primos
+SEN		: 'sin'		;
+PRIM	: 'primos'	;    //primos
 POT		: 'pou'		;
 
 //asignacion
