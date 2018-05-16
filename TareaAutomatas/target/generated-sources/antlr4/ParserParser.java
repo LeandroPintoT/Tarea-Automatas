@@ -39,7 +39,7 @@ public class ParserParser extends Parser {
 		"'int'", "'bool'", "'string'", "'muestra'", "'leer'", "'+'", "'-'", "'*'", 
 		"'/'", "'%'", "'and'", "'or'", "'!'", "'>'", "'<'", "'>='", "'<='", "'=='", 
 		"'!='", "'if'", "'else'", "'switch'", "'while'", "'for'", "'sqrt'", "'fiboniichan'", 
-		"'cos'", "'oppai'", "'itoko'", "'pou'", "'='", "'{'", "'}'", "'('", "')'", 
+		"'cos'", "'sin'", "'primos'", "'pou'", "'='", "'{'", "'}'", "'('", "')'", 
 		"'['", "']'", "'\"'", "'|'", "'introIngInf'", "'proyTi'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
