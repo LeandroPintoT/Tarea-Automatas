@@ -83,7 +83,7 @@ sumas	:	ID SUMA ID
 muestra	:	MUESTRA COM ID COM SALTO
 		;
 		
-leer	: ID ASIGN LEE SALTO 
+leer	: ID ASIGN LEE SALTO
 		;
 
 fors	:	FOR asignvar PIP operaciones LLI bloque LLD
