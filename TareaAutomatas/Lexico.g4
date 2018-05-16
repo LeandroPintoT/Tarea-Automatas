@@ -83,6 +83,11 @@ PCD		: ']'	;
 COM		: '"'	;
 PIP		: '|'	;
 
+//puntuacion
+DP		: ':'	;
+
 BEGIN	: 'introIngInf'	;	//home
 END		: 'proyTi'		;	//mutunga
 
+CASE	:  'caso'		;   //tuhinga
+DEFAULT :  'defecto'	;	//mate

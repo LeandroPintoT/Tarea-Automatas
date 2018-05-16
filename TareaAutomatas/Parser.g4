@@ -20,6 +20,7 @@ sentencia	:    declaracionvar
             |    condicional
             |    operaciones
             |    fors
+            |	 switchz
             |    whiles
             ;
 
@@ -98,3 +99,9 @@ bloque_condicional 	: 	PI operaciones PD LLI bloque LLD
 					| PI operaciones PD sentencia
 					;	
 					
+switchz	:	PI ID PD LLI casos_switch+  LLD
+		;
+
+casos_switch:	CASE NUM DP sentencia
+			|	DEFAULT DP sentencia
+			;

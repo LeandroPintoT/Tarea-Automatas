@@ -3,6 +3,7 @@ introIngInf
 	real var2 = 0
 	real var3
 	real var4
+	int  i
 	
 	muestra "var2"
 	
@@ -22,6 +23,12 @@ introIngInf
 		if(var3>50){
 			var1=suamor
 		}
+	}
+	i=leer
+	
+	switch (i){
+		case 1: muestra "var1"
+	    default: muestra "i"
 	}
 		
 proyTi
