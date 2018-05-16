@@ -492,9 +492,9 @@ public class ParserParser extends Parser {
 		public TerminalNode ID() { return getToken(ParserParser.ID, 0); }
 		public TerminalNode ASIGN() { return getToken(ParserParser.ASIGN, 0); }
 		public TerminalNode NUM() { return getToken(ParserParser.NUM, 0); }
-		public TerminalNode BOOL() { return getToken(ParserParser.BOOL, 0); }
-		public TerminalNode ENTERO() { return getToken(ParserParser.ENTERO, 0); }
-		public TerminalNode STRING() { return getToken(ParserParser.STRING, 0); }
+		public TerminalNode SINO() { return getToken(ParserParser.SINO, 0); }
+		public TerminalNode STR() { return getToken(ParserParser.STR, 0); }
+		public TerminalNode FLOAT() { return getToken(ParserParser.FLOAT, 0); }
 		public AsignvarContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -532,7 +532,7 @@ public class ParserParser extends Parser {
 				setState(79);
 				match(ASIGN);
 				setState(80);
-				match(BOOL);
+				match(SINO);
 				}
 				break;
 			case 3:
@@ -543,7 +543,7 @@ public class ParserParser extends Parser {
 				setState(82);
 				match(ASIGN);
 				setState(83);
-				match(ENTERO);
+				match(STR);
 				}
 				break;
 			case 4:
@@ -554,7 +554,7 @@ public class ParserParser extends Parser {
 				setState(85);
 				match(ASIGN);
 				setState(86);
-				match(STRING);
+				match(FLOAT);
 				}
 				break;
 			}
@@ -1270,8 +1270,8 @@ public class ParserParser extends Parser {
 		"\2\2?:\3\2\2\2?;\3\2\2\2?<\3\2\2\2?=\3\2\2\2?>\3\2\2\2@\13\3\2\2\2AB\5"+
 		"\16\b\2BC\7\4\2\2CD\7\65\2\2DJ\3\2\2\2EF\5\16\b\2FG\5\20\t\2GH\7\65\2"+
 		"\2HJ\3\2\2\2IA\3\2\2\2IE\3\2\2\2J\r\3\2\2\2KL\t\2\2\2L\17\3\2\2\2MN\7"+
-		"\4\2\2NO\7*\2\2OZ\7\6\2\2PQ\7\4\2\2QR\7*\2\2RZ\7\r\2\2ST\7\4\2\2TU\7*"+
-		"\2\2UZ\7\f\2\2VW\7\4\2\2WX\7*\2\2XZ\7\16\2\2YM\3\2\2\2YP\3\2\2\2YS\3\2"+
+		"\4\2\2NO\7*\2\2OZ\7\6\2\2PQ\7\4\2\2QR\7*\2\2RZ\7\b\2\2ST\7\4\2\2TU\7*"+
+		"\2\2UZ\7\t\2\2VW\7\4\2\2WX\7*\2\2XZ\7\7\2\2YM\3\2\2\2YP\3\2\2\2YS\3\2"+
 		"\2\2YV\3\2\2\2Z\21\3\2\2\2[\\\b\n\1\2\\b\7\4\2\2]^\7-\2\2^_\5\22\n\2_"+
 		"`\7.\2\2`b\3\2\2\2a[\3\2\2\2a]\3\2\2\2bi\3\2\2\2cd\f\5\2\2de\5\24\13\2"+
 		"ef\5\22\n\6fh\3\2\2\2gc\3\2\2\2hk\3\2\2\2ig\3\2\2\2ij\3\2\2\2j\23\3\2"+
