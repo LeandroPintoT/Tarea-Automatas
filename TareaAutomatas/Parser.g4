@@ -37,9 +37,9 @@ variable	:	REAL
 
 
 asignvar	:	ID ASIGN NUM
-			|	ID ASIGN BOOL
-			|	ID ASIGN ENTERO
-			|	ID ASIGN STRING
+			|	ID ASIGN SINO
+			|	ID ASIGN STR
+			|	ID ASIGN FLOAT
 			;
 
 
