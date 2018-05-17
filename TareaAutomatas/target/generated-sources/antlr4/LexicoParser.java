@@ -29,12 +29,13 @@ public class LexicoParser extends Parser {
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'hello'", null, null, "'\n'", null, null, null, null, "'real'", 
-		"'int'", "'bool'", "'string'", "'muestra'", "'leer'", "'+'", "'-'", "'*'", 
-		"'/'", "'%'", "'and'", "'or'", "'!'", "'>'", "'<'", "'>='", "'<='", "'=='", 
-		"'!='", "'if'", "'else'", "'switch'", "'while'", "'for'", "'sqrt'", "'fiboo'", 
-		null, "'sin'", null, "'pou'", "'='", "'{'", "'}'", "'('", "')'", "'['", 
-		"']'", "'\"'", "'|'", "':'", "'introIngInf'", "'proyTi'", "'caso'", "'defecto'"
+		null, "'hello'", null, null, "'\n'", null, null, null, null, "'tau'", 
+		"'katoa'", "'engari'", "'mekameka'", "'tauira'", "'panui'", "'+'", "'-'", 
+		"'*'", "'/'", "'%'", "'a'", "'ranei'", "'kore'", "'>'", "'<'", "'>='", 
+		"'<='", "'=='", "'!='", "'ae'", "'aee'", "'huringa'", "'ahakoa'", "'mo'", 
+		"'pakiaka'", "'fiboo'", null, "'pokapu'", "'teina'", "'mana'", "'='", 
+		"'{'", "'}'", "'('", "')'", "'['", "']'", "'\"'", "'|'", "':'", "'home'", 
+		"'mutunga'", null, "'mate'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, null, "ID", "WS", "SALTO", "NUM", "FLOAT", "SINO", "STR", "REAL", 

@@ -10,8 +10,8 @@ WS : [ \t\r]+ -> skip ;             // skip spaces, tabs, newlines
 //tipos de dato
 fragment DIG		: [0-9]		;
 fragment PUNTO		: '.'		;
-fragment TRUE		: 'noteama'	;	//pono
-fragment NOTRUE		: 'suamor'	;	//rino
+fragment TRUE		: 'pono'	;	//no te ama
+fragment NOTRUE		: 'rino'	;	//su amor
 
 
 SALTO	:	'\n'			;
@@ -21,15 +21,15 @@ SINO	: 	TRUE | NOTRUE	;
 STR		:	'"'.*?'"'		;
 
 //variables
-REAL	: 'real'	;	//numero = tau
-ENTERO	: 'int'		;	//katoa
-BOOL	: 'bool'	;	//sino = engari
-STRING	: 'string'	;	//cadena = aho  -  cadenas = mekameka
+REAL	: 'tau'		;	//real
+ENTERO	: 'katoa'	;	//int
+BOOL	: 'engari'	;	//bool
+STRING	: 'mekameka'	;	//cadena = aho  -  string
 
 
 //output input
-MUESTRA	: 'muestra'	;	//tauira  -  imprimir = ta
-LEE		: 'leer'	;	//panui
+MUESTRA	: 'tauira'	;	//muestra  -  imprimir = ta
+LEE		: 'panui'	;	//leer
 
 //operadores matematicos
 SUMA	: '+'	;
@@ -40,9 +40,9 @@ MOD		: '%'	;
 
 
 //operadores logicos
-AND		: 'and'	;	//a
-OR		: 'or'	;	//ó = ranei
-NOT		: '!'	;	//kore
+AND		: 'a'	;	//and
+OR		: 'ranei'	;	//or
+NOT		: 'kore'	;	//!
 
 //operadores logicos x2
 MAYOR	: '>'	;
@@ -53,21 +53,21 @@ IG		: '=='	;
 NIG		: '!='	;
 
 //condicionales
-IF		: 'if'		;	//ae
-ELSE	: 'else'	;	//si no = aee
-SWITCH	: 'switch'	;	//interruptor = whakawhiti  -  cambiar = huringa
+IF		: 'ae'		;	//if
+ELSE	: 'aee'		;	//else
+SWITCH	: 'huringa'	;	//interruptor = whakawhiti  -  switch
 
 //estructuras repetitivas
-WHILE	: 'while'	;	//ahakoa
-FOR		: 'for'		;	//mo
+WHILE	: 'ahakoa'	;	//while
+FOR		: 'mo'		;	//for
 
 //funciones matematicas
-SQRT	: 'sqrt'	;	//pakiaka
+SQRT	: 'pakiaka'	;	//sqrt
 FIB		: 'fiboo'	;    //fibonacci  -  fiboo
-COS		: 'cos'		;	//tuhinga
-SEN		: 'sin'		;	//tuhinga x2
-PRIM	: 'cos'		;   //teina
-POT		: 'pou'		;	//mana
+COS		: 'tuhinga'	;	//cos
+SEN		: 'pokapu'	;	//sin
+PRIM	: 'teina'	;   //teina
+POT		: 'mana'	;	//pou
 
 
 //asignacion
@@ -86,8 +86,8 @@ PIP		: '|'	;
 //puntuacion
 DP		: ':'	;
 
-BEGIN	: 'introIngInf'	;	//home
-END		: 'proyTi'		;	//mutunga
+BEGIN	: 'home'		;	//introIngInf
+END		: 'mutunga'		;	//proyTi
 
-CASE	:  'caso'		;   //tuhinga
-DEFAULT :  'defecto'	;	//mate
+CASE	:  'tuhinga'	;   //caso
+DEFAULT :  'mate'		;	//defecto
