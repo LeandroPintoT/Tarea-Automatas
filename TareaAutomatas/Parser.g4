@@ -67,7 +67,7 @@ operador	:	MAYOR
 			;
 
 
-whiles	:	PI operaciones PD LLI bloque LLD
+whiles	:	WHILE PI operaciones PD LLI bloque LLD
 		;
 
 
@@ -99,7 +99,7 @@ bloque_condicional 	: 	PI operaciones PD LLI bloque LLD
 					| PI operaciones PD sentencia
 					;	
 					
-switchz	:	PI ID PD LLI casos_switch+  LLD
+switchz	:	SWITCH PI ID PD LLI casos_switch+  LLD
 		;
 
 casos_switch:	CASE NUM DP sentencia

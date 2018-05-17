@@ -1,34 +1,34 @@
-introIngInf
-	bool var1 = noteama
-	real var2 = 0
-	real var3
-	real var4
-	int  i
+home
+	engari taurangi1 = pono
+	tau taurangi2 = 0
+	tau taurangi3
+	tau taurangi4
+	katoa  i
 	
-	muestra "var2"
+	tauri "taurangi2"
 	
-	if(var2==0){
-		var2=2000
+	ae(taurangi2==0){
+		taurangi2=2000
 	}
 	
-	var4=leer
-	for var3=1| var3<100{
-		var2 = var2-1
-		muestra "var2"
+	taurangi4=panui
+	mo taurangi3=1| taurangi3<100{
+		taurangi2 = taurangi2-1
+		tauri "taurangi2"
 	}
 	
-	var3=0
-	while (var1){
-		var3 = var3+1
-		if(var3>50){
-			var1=suamor
+	taurangi3=0
+	ahakoa (taurangi1){
+		taurangi3 = taurangi3+1
+		ae(taurangi3>50){
+			taurangi1=suamor
 		}
 	}
-	i=leer
+	i=panui
 	
-	switch (i){
-		case 1: muestra "var1"
-	    default: muestra "i"
+	huringa (i){
+		tuhinga 1: tauri "taurangi1"
+	    mate: tauri "i"
 	}
 		
-proyTi
+mutunga
