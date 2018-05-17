@@ -3,7 +3,7 @@ programa ::= inicio sentencia finale
 inicio ::= "introIngInf"
 finale ::= "proyTi"
 
-sentencia ::=  declaracionvar|asignvar|muestra|leer|condicional|operaciones|fors|whiles
+sentencia ::=  declaracionvar|asignvar|muestra|leer|condicional|operaciones|fors|switchz|whiles
 
 declaracionvar ::= (variable "A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"
 					|"N"|"Ñ"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"a"
@@ -78,22 +78,22 @@ bloque	::=		sentencia
 <muestra> ::=	("muestra" """" ("A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"
 				|"N"|"Ñ"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"a"
 				|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"
-				|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|{"A"
+				|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|("A"
 				|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"
 				|"N"|"Ñ"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"a"
 				|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"
 				|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|"0"
-				|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|} """" "\n")
+				|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|)* """" "\n")
 
 leer ::=	(("A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"
 			|"N"|"Ñ"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"a"
 			|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"
-			|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|{"A"
+			|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|("A"
 			|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"
 			|"N"|"Ñ"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"a"
 			|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"
 			|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|"0"
-			|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|}) "=" "leer" "\n")
+			|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|)*) "=" "leer" "\n")
 
 fors ::=	("for" <asignvar> "|" <operaciones> "{" <bloque> "}")	
 
@@ -102,4 +102,15 @@ condicional ::=	"if" bloque_condicional ["else" bloque_concional]
 bloque_condicional ::=	("(" <operaciones> ")" "{" <bloque> "}")	
 							|("(" <operaciones> ")" <sentencia>)
 
+switchz ::=	"(" ("A"|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"
+			|"N"|"Ñ"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"a"
+			|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"
+			|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|("A"
+			|"B"|"C"|"D"|"E"|"F"|"G"|"H"|"I"|"J"|"K"|"L"|"M"
+			|"N"|"Ñ"|"O"|"P"|"Q"|"R"|"S"|"T"|"U"|"V"|"W"|"X"|"Y"|"Z"|"a"
+			|"b"|"c"|"d"|"e"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"m"
+			|"n"|"ñ"|"o"|"p"|"q"|"r"|"s"|"t"|"u"|"v"|"w"|"x"|"y"|"z"|"0"
+			|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|)*) ")" "{" casos_switch+ "}"
 
+casos_switch ::= "caso" ("0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|) ":" sentencia
+				 | "defecto" ":" sentencia
