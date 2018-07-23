@@ -93,7 +93,7 @@ fors	:	FOR asignvar PIP operaciones LLI bloque LLD
 
 condicional	 :	IF bloque_condicional
 				(ELSE bloque_condicional)?
-				;	
+				;
 
 bloque_condicional 	: 	PI operaciones PD LLI bloque LLD
 					| PI operaciones PD sentencia
