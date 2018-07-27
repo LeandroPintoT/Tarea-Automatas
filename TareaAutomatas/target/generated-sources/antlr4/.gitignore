@@ -15,3 +15,11 @@
 /ParserLexer.tokens
 /ParserParser.java
 /ParserVisitor.java
+/HotakaLangParser.tokens
+/HotakaLangParserBaseVisitor.java
+/HotakaLangParserLexer.java
+/HotakaLangParserLexer.tokens
+/HotakaLangParserParser.java
+/HotakaLangParserVisitor.java
+/HotakaLangLexer.java
+/HotakaLangLexer.tokens

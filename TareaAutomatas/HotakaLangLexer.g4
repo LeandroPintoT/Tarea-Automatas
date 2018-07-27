@@ -1,7 +1,5 @@
-grammar Lexico;
+lexer grammar HotakaLangLexer;
 
-
-r  : 'hello' ID ;                     // match keyword hello followed by an identifier
 
 ID : [a-zA-Z]+[a-zA-Z0-9-]* ;     // un id puede empezar con letras o  y puede ser seguido o no de letras, numeros,  y -
 
