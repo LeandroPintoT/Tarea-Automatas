@@ -5,7 +5,7 @@ home
 	tau taurangi4
 	katoa  i
 	
-	tauri "taurangi2"
+	tauira "taurangi2"
 	
 	ae(taurangi2==0){
 		taurangi2=2000
@@ -14,7 +14,7 @@ home
 	taurangi4=panui
 	mo taurangi3=1| taurangi3<100{
 		taurangi2 = taurangi2-1
-		tauri "taurangi2"
+		tauira "taurangi2"
 	}
 	
 	taurangi3=0

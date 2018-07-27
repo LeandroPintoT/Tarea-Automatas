@@ -1,6 +1,6 @@
-grammar Parser;
+grammar HotakaLangParser;
 
-import Lexico;
+import HotakaLangLexer;
 
 
 s 		: sentencia EOF					
